@@ -1,0 +1,8 @@
+# Node Modules
+node_modules
+
+# Private files
+.env
+
+# Logs
+*.log

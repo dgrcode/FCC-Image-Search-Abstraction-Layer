@@ -1,0 +1,23 @@
+{
+  "name": "fcc-image-search-abstraction-layer",
+  "version": "1.0.0",
+  "description": "Image search abstraction layer for FCC backend certificate",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgrcode/FCC-Image-Search-Abstraction-Layer.git"
+  },
+  "author": "Daniel González Reina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgrcode/FCC-Image-Search-Abstraction-Layer/issues"
+  },
+  "homepage": "https://github.com/dgrcode/FCC-Image-Search-Abstraction-Layer#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongodb": "^2.2.24"
+  }
+}
