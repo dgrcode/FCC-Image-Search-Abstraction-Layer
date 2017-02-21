@@ -1,6 +1,7 @@
 const express = require('express');
 const querystring = require('querystring');
 const https = require('https');
+const dblogic = require('./dblogic');
 
 const app = express();
 
@@ -56,12 +57,21 @@ app.get('/search/:str', (req, res) => {
 	});
 
 	// Stores this search in the history
-	
+	dblogic.saveSearch(query.q);
+
 });
 
 app.get('/history', (req, res) => {
-	console.log('Looking for the history');
-	res.end();
+	dblogic.getHistory()
+	.then(docs => {
+		res.json(docs);
+		res.end();
+	})
+	.catch(err => {
+		console.log('Error when looking for the history.');
+		console.log(err);
+		res.end();
+	});
 });
 
 app.listen(process.env.PORT);
